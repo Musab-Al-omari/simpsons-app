@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('layout/header') %>
+    </header>
+
+    <section class="center">
+        <img src="<%=element.image1  %> " alt="">
+        <h2>
+            <%= element.character1 %>
+        </h2>
+        <h2>
+            <%= element.quote%>
+        </h2>
+        <form action="/favorite-quotes/<%= element.id%>?_method=DELETE" method="post">
+            <button>delete</button>
+        </form>
+        <button onclick="musab()">click to update</button>
+
+        <form action="/favorite-quotes/<%= element.id%>?_method=PUT" method="post" id="hide">
+            <br>
+            <input type="text" name="image" value="<%=element.image1  %>">
+            <br>
+            <input type="text" name="character" value="<%= element.character1 %>">
+            <br>
+            <textarea name="quote" id="" cols="30" rows="10"><%= element.quote%></textarea> 
+            <br>
+            <input type="text" name="characterDirection" value=" <%= element.characterDirection%>">
+            <br>
+            <button>update</button>
+        </form>
+    </section>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script>
+    function musab() {
+        $('#hide').toggle()
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('layout/header') %>
+    </header>
+    <% homePageArray.forEach(element=> { %>
+        <section class="center">
+            <img src="<%=element.image  %> " alt="">
+            <h2>
+                <%= element.character %>
+            </h2>
+            <h2>
+                <%= element.quote%>
+            </h2>
+            <form action="/" method="post">
+                <input type="hidden" name="image" value="<%=element.image  %>">
+                <input type="hidden" name="character" value="<%= element.character %>">
+                <input type="hidden" name="quote" value=" <%= element.quote%>">
+                <input type="hidden" name="characterDirection" value=" <%= element.characterDirection%>">
+                
+                <button>save</button>
+            </form>
+        </section>
+
+        <% }); %>
+</body>
+
+</html>

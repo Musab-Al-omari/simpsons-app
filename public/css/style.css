@@ -1,0 +1,42 @@
+body {
+    color: #fefb1e;
+    background-color: #62C8E4;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 115px;
+}
+nav{
+    
+    background-color: #16a085;
+    /* display: inline; */
+}
+
+header {
+    background-color: #16a085;
+}
+
+.center {
+    background-color: #16a085;
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(128, 119, 0);
+    padding: 10px;
+    margin-top: 2%;
+}
+
+#hide {
+    display: none;
+}
+
+#imgee {
+    float: left;
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+}
+.atag{
+    float: right;
+}

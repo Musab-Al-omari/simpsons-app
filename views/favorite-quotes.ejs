@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('layout/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('layout/header') %>
+    </header>
+    <% myFavor.forEach(element=> { %>
+        <section class="center">
+            <img src="<%=element.image1  %> " alt="">
+            <h2>
+                <%= element.character1 %>
+            </h2>
+            <h2>
+                <%= element.quote%>
+            </h2>
+            <h2>
+                <%= element.id%>
+            </h2>
+            <form action="/favorite-quotes/<%=element.id %>" method="GET">
+            <button>more info</button>
+            </form>
+        </section>
+        <% }); %>
+</body>
+
+</html>
